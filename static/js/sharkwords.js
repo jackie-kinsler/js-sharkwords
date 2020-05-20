@@ -39,7 +39,12 @@ const disableLetterButton = (buttonEl) => {
 // Return `true` if `letter` is in the word.
 //
 const isLetterInWord = (letter) => {
-  // Replace this with your code
+  const letterBoxes = $(`'.${ letter }'`);
+
+  // returns false if there are no divs with the specified letter
+  // returns true if a div is found with the specified letter
+  return !(letterBoxes[0] === undefined);
+
 };
 
 
