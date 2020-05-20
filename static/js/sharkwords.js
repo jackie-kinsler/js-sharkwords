@@ -21,7 +21,7 @@ const createDivsForChars = (word) => {
 //
 const generateLetterButtons = () => {
   for (const letter of ALPHABET) {
-    $('#letter-buttons').append(`<button> ${ letter } </button>`);
+    $('#letter-buttons').append(`<button>${ letter }</button>`);
   }
 };
 
@@ -39,7 +39,7 @@ const disableLetterButton = (buttonEl) => {
 // Return `true` if `letter` is in the word.
 //
 const isLetterInWord = (letter) => {
-  const letterBoxes = $(`'.${ letter }'`);
+  const letterBoxes = $(`.${letter}`);
 
   // returns false if there are no divs with the specified letter
   // returns true if a div is found with the specified letter
@@ -51,7 +51,9 @@ const isLetterInWord = (letter) => {
 // Called when `letter` is in word. Update contents of divs with `letter`.
 //
 const handleCorrectGuess = (letter) => {
-  // Replace this with your code
+  const letterBoxes = $(`.${letter}`);
+  letterBoxes.text(`${letter}`);
+
 };
 
 
